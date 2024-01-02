@@ -23,6 +23,6 @@ export class StudentService {
         return this.http.put<Student>(`${this.apiServerUrl}/student/update`, student)
     }
     public deleteStudent(studentId: number): Observable<void>{
-        return this.http.delete<void>(`${this.apiServerUrl}/student/delete${studentId}`)
+        return this.http.delete<void>(`${this.apiServerUrl}/student/delete/${studentId}`)
     }
 }
